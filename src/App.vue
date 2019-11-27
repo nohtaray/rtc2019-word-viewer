@@ -34,7 +34,7 @@
     </v-app-bar>
 
     <v-content>
-      <Word :word-set="rtcWords.computer" />
+      <Word :word-set="[rtcWords.computer, rtcWords.sports, rtcWords.heisei]" />
     </v-content>
   </v-app>
 </template>
