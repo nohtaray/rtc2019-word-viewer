@@ -43,5 +43,6 @@ export default class Word extends Vue {
   margin-top: 40%;
   text-align: center;
   font-size: large;
+  color: #eeeeee;
 }
 </style>
