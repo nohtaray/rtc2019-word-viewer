@@ -26,10 +26,22 @@ export default class Word extends Vue {
     const ws2 = Math.floor(Math.random() * 100 + 100);
     this.kana = this.wordSet[w].kanas[ws1] + this.wordSet[w].kanas[ws2];
     this.roma = this.wordSet[w].romas[ws1] + this.wordSet[w].romas[ws2];
+
+    const keys =
+      this.wordSet[w].kana_keys[ws1] + this.wordSet[w].kana_keys[ws2];
+
+    const latencyMs = 500;
+    const targetKpm = 600;
+    const timeout = latencyMs + (keys.length / targetKpm) * 60000;
+    this.timer = setTimeout(() => {
+      this.kana = "";
+      this.roma = "";
+      setTimeout(this.updateWord, 400);
+    }, timeout);
   }
 
   mounted(): void {
-    this.timer = setInterval(this.updateWord, 3000);
+    this.timer = setTimeout(this.updateWord, 0);
   }
 
   destroyed(): void {
