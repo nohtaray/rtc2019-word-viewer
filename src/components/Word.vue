@@ -38,4 +38,10 @@ export default class Word extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.word {
+  margin-top: 40%;
+  text-align: center;
+  font-size: large;
+}
+</style>
