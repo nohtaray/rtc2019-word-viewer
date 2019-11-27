@@ -45,7 +45,7 @@ export default class Word extends Vue {
   }
 
   destroyed(): void {
-    clearInterval(this.timer);
+    clearTimeout(this.timer);
   }
 }
 </script>
