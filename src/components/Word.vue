@@ -40,7 +40,7 @@ export default class Word extends Vue {
 
 <style scoped>
 .word {
-  margin-top: 40%;
+  margin-top: 40vh;
   text-align: center;
   font-size: large;
   color: #eeeeee;
