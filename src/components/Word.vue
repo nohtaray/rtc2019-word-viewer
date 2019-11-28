@@ -33,10 +33,11 @@ export default class Word extends Vue {
     const latencyMs = 500;
     const targetKpm = 600;
     const timeout = latencyMs + (keys.length / targetKpm) * 60000;
+    const intervalMs = 500;
     this.timer = setTimeout(() => {
       this.kana = "";
       this.roma = "";
-      setTimeout(this.updateWord, 400);
+      this.timer = setTimeout(this.updateWord, intervalMs);
     }, timeout);
   }
 
